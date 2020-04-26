@@ -10,11 +10,11 @@ using MyProjectApi.Dtos;
 
 namespace MyProjectApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/authorize")]
     [ApiController]
-    public class AuthorizationController : ControllerBase
+    public class AuthorizeController : ControllerBase
     {
-        [HttpPost("/token")]
+        [HttpPost("token")]
         public TokenResponse Token([FromBody]LoginRequest loginDto)
         {
             if (!string.IsNullOrWhiteSpace(loginDto.UserName) && !string.IsNullOrWhiteSpace(loginDto.Password))
