@@ -1,0 +1,3 @@
+dotnet MyProjectApi.dll
+
+pause
