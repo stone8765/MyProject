@@ -22,5 +22,11 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="RunApi.cmd">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 
 </Project>
