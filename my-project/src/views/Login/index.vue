@@ -26,7 +26,18 @@ export default {
   },
   methods: {
     login () {
-      login(this.userName, this.password);
+      login(this.userName, this.password).then(res => {
+        try {
+          if (this.$route.query.redirect) {
+            const url = decodeURIComponent(this.$route.query.redirect)
+            this.$router.push({ path: url });
+          } else {
+            this.$router.push({ path: '/' });
+          }
+        } catch (err) {
+          this.$router.push({ path: '/' });
+        }
+      });
     }
   }
 }
